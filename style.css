@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'montserrat';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #aae30cf6;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 200px;
+    width: 200px;
+    background-color: #97c90eef;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+}
+#nav{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(43, 127, 160);
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap:50px;
+    position: fixed;
+    justify-content: center;
+    z-index: 99;
+
+}
+#nav img{
+    height: 80px;
+
+}
+#nav h4{
+
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+}
+video{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    
+}
+#main{
+    position: relative;
+    background-color: rgb(18, 10, 10, 35.);
+
+}
+
+#page1{
+    height:100vh;
+    width: 100vh;
+    POSITION:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    
+}
+#page1 h1{
+    font-size:70px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+content:"EAT.DRINK.PLAY.";
+position: absolute;
+color: black;
+top: -4px;
+left: -4px;
+-webkit-text-stroke: 2px #95C11E;
+z-index: -1;
+}
+#page1 h2{
+    font-size:20px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+
+}
+#page1 p{
+    font-size:15px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    
+
+}
+#page2{
+    min-height:100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+
+#scroller {
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display:inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 60px;
+    font-weight:700;
+    font-family:gilroy;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparents;
+    -webkit-text-stroke: 2px #95C11E;
+
+}
+
+#scroller h4:hover{
+    color:#96c11ef8;
+}
+
+@keyframes scroll{
+    from{
+        transform: translatex(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+#about-us{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 5-[x];
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+
+}
+#about-us img{
+    height:220px;
+    width:220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-us-in{
+    width:40%;
+    text-align:center;
+}
+#about-us-in h3{
+    font-size:30px;
+    font-weight:800;
+    margin-bottom: 40px;
+}
+#about-us-in p{
+    font-size: 15px;
+    line-height: 26px;
+}
+#cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.card{
+    height: 80%;
+    width:28%;
+    background-color: blue;
+    border-radius: 18px;
+}
+#card1{
+   background-image: url(./assets/images/card1.jpg);
+   background-size: cover;
+    
+}
+#card2 {
+    background-image: url(./assets/images/card2.jpg);
+   background-size: cover;
+    
+}
+#card3{
+    background-image: url(./assets/images/card3.jpg);
+   background-size: cover;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color:#95C11E;
+    padding: 50px;
+    padding-top: 120px;
+}
+
+.overlay h4{
+    color:#000;
+}
+.overlay p{
+
+}
